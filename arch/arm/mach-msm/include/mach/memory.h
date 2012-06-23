@@ -125,7 +125,12 @@ extern unsigned long membank1_start;
 #define arch_has_speculative_dfetch()	1
 #endif
 
+#if defined(CONFIG_KEXEC_HARDBOOT) && !defined(CONFIG_MACH_SMDKV210)
+/* CHANGE ME !!! */
+//#define KEXEC_HB_PAGE_ADDR 0x57fff000
 #endif
+
+#endif /* __ASM_ARCH_MEMORY_H */
 
 /* these correspond to values known by the modem */
 #define MEMORY_DEEP_POWERDOWN	0
